@@ -38,8 +38,13 @@ export default function LandingPage() {
           >
             <Button
               size='lg'
-              className='bg-green-500/50 text-black border border-green-500/50 px-8 py-6 text-xl cursor-not-allowed'
-              disabled
+              className='bg-green-500/50 text-black border border-green-500/50 px-8 py-6 text-xl'
+              onClick={() => {
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLScn-QIszixDtIvEAb8nKsnTr0Z3O9erGMDxwoRhkKkxeqbDKg/viewform",
+                  "_blank"
+                );
+              }}
             >
               <span className='relative z-10'>HACK THE CHAT NOW</span>
             </Button>
