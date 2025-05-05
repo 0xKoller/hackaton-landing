@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Roboto_Mono } from "next/font/google";
-import "./globals.css";
+import "./global.css";
 
 const geistSans = Montserrat({
   subsets: ["latin"],
