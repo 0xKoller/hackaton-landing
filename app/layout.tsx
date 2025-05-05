@@ -56,7 +56,6 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
     creator: "@0xkoller",
   },
-  themeColor: "#16a34a",
   robots: {
     index: true,
     follow: true,
