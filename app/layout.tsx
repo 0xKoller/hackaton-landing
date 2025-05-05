@@ -46,15 +46,15 @@ export const metadata: Metadata = {
     siteName: "WhatsApp AI Hackathon",
     locale: "en_US",
     type: "website",
-    // image: "/og-image.png", // Uncomment and add a real image if available
+    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "WhatsApp AI Hackathon | Build AI Agents for 2+ Billion Users",
     description:
       "Join the WhatsApp AI Hackathon! Build AI agents using LLMs and WhatsApp's Business API. Form teams, win prizes, and reach 2+ billion users. June 7th, 2025, CABA.",
-    // images: ["/og-image.png"], // Uncomment and add a real image if available
-    creator: "@yourtwitterhandle",
+    images: ["/og-image.png"],
+    creator: "@0xkoller",
   },
   themeColor: "#16a34a",
   robots: {
