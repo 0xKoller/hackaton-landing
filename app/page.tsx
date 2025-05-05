@@ -38,7 +38,7 @@ export default function LandingPage() {
           >
             <Button
               size='lg'
-              className='bg-green-500/50 text-black border border-green-500/50 px-8 py-6 text-xl'
+              className='bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
               onClick={() => {
                 window.open(
                   "https://docs.google.com/forms/d/e/1FAIpQLScn-QIszixDtIvEAb8nKsnTr0Z3O9erGMDxwoRhkKkxeqbDKg/viewform",
