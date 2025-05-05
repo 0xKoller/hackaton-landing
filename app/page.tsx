@@ -5,11 +5,11 @@ import { BrutalistText } from "@/components/brutalist-text";
 import { BrutalistEventDetail } from "@/components/brutalist-event-detail";
 import { BrutalistComingSoon } from "@/components/brutalist-coming-soon";
 import { BrutalistCountdown } from "@/components/brutalist-countdown";
-import { BrutalistTimeline } from "@/components/brutalist-timeline";
+// import { BrutalistTimeline } from "@/components/brutalist-timeline";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { Calendar, MapPin, Users, Trophy } from "lucide-react";
-import { timelineEvents } from "@/data/timeline";
+// import { timelineEvents } from "@/data/timeline";
 
 export default function LandingPage() {
   const prizesRef = useRef<HTMLDivElement>(null);
@@ -70,14 +70,14 @@ export default function LandingPage() {
             {/* Left column - Event overview */}
             <div>
               <BrutalistText className='mb-8'>
-                This isn't just another hackathon. It's your gateway to building
-                AI agents that can reach
+                This isn&apos;t just another hackathon. It&apos;s your gateway
+                to building AI agents that can reach
                 <span className='text-green-500 font-bold'>
                   {" "}
                   2+ billion WhatsApp users
                 </span>
-                . Leverage cutting-edge LLMs, WhatsApp's Business API, and your
-                code to create agents that solve real problems.
+                . Leverage cutting-edge LLMs, WhatsApp&apos;s Business API, and
+                your code to create agents that solve real problems.
               </BrutalistText>
 
               <BrutalistText delay={0.2} className='mb-8'>
@@ -85,7 +85,7 @@ export default function LandingPage() {
                 <span className='text-green-500 font-bold'>
                   teams of up to 5 people
                 </span>{" "}
-                with diverse skills. Whether you're a{" "}
+                with diverse skills. Whether you&apos;re a{" "}
                 <span className='text-green-500'>
                   machine learning engineer
                 </span>

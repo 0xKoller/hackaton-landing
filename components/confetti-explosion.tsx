@@ -1,15 +1,27 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react";
 
 interface ConfettiExplosionProps {
-  active: boolean
-  duration?: number
-  particleCount?: number
-  width?: number
-  height?: number
-  colors?: string[]
-  onComplete?: () => void
+  active: boolean;
+  duration?: number;
+  particleCount?: number;
+  width?: number;
+  height?: number;
+  colors?: string[];
+  onComplete?: () => void;
+}
+
+interface Particle {
+  x: number;
+  y: number;
+  size: number;
+  color: string;
+  rotation: number;
+  speed: number;
+  velocity: { x: number; y: number };
+  rotationSpeed: number;
+  shape: "circle" | "square";
 }
 
 export function ConfettiExplosion({
@@ -21,16 +33,18 @@ export function ConfettiExplosion({
   colors = ["#25D366", "#128C7E", "#075E54", "#FFFFFF", "#34B7F1"],
   onComplete,
 }: ConfettiExplosionProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
-  const [particles, setParticles] = useState<any[]>([])
-  const animationRef = useRef<number | null>(null)
-  const startTimeRef = useRef<number | null>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [particles, setParticles] = useState<Particle[]>([]);
+  const animationRef = useRef<number | null>(null);
+  const startTimeRef = useRef<number | null>(null);
 
   // Create particles when active changes to true
   useEffect(() => {
     if (active && particles.length === 0) {
-      const newParticles = []
+      const newParticles = [];
       for (let i = 0; i < particleCount; i++) {
+        const shape: "circle" | "square" =
+          Math.random() > 0.5 ? "circle" : "square";
         newParticles.push({
           x: width / 2,
           y: height / 2,
@@ -43,45 +57,45 @@ export function ConfettiExplosion({
             y: (Math.random() - 0.5) * 8,
           },
           rotationSpeed: (Math.random() - 0.5) * 2,
-          shape: Math.random() > 0.5 ? "circle" : "square",
-        })
+          shape,
+        });
       }
-      setParticles(newParticles)
-      startTimeRef.current = null
+      setParticles(newParticles);
+      startTimeRef.current = null;
     }
-  }, [active, colors, height, particleCount, particles.length, width])
+  }, [active, colors, height, particleCount, particles.length, width]);
 
   // Animation loop
   useEffect(() => {
-    if (!active || particles.length === 0) return
+    if (!active || particles.length === 0) return;
 
-    const canvas = canvasRef.current
-    if (!canvas) return
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    const ctx = canvas.getContext("2d")
-    if (!ctx) return
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
     const animate = (timestamp: number) => {
-      if (!startTimeRef.current) startTimeRef.current = timestamp
-      const elapsed = timestamp - startTimeRef.current
+      if (!startTimeRef.current) startTimeRef.current = timestamp;
+      const elapsed = timestamp - startTimeRef.current;
 
       // Clear canvas
-      ctx.clearRect(0, 0, width, height)
+      ctx.clearRect(0, 0, width, height);
 
       // Update and draw particles
-      const updatedParticles = [...particles]
-      let allOutside = true
+      const updatedParticles = [...particles];
+      let allOutside = true;
 
-      updatedParticles.forEach((particle, i) => {
+      updatedParticles.forEach((particle) => {
         // Apply gravity and friction
-        particle.velocity.y += 0.1
-        particle.velocity.x *= 0.99
-        particle.velocity.y *= 0.99
+        particle.velocity.y += 0.1;
+        particle.velocity.x *= 0.99;
+        particle.velocity.y *= 0.99;
 
         // Update position
-        particle.x += particle.velocity.x
-        particle.y += particle.velocity.y
-        particle.rotation += particle.rotationSpeed
+        particle.x += particle.velocity.x;
+        particle.y += particle.velocity.y;
+        particle.rotation += particle.rotationSpeed;
 
         // Check if any particle is still inside the canvas
         if (
@@ -90,54 +104,59 @@ export function ConfettiExplosion({
           particle.y > -particle.size &&
           particle.y < height + particle.size
         ) {
-          allOutside = false
+          allOutside = false;
         }
 
         // Draw particle
-        ctx.save()
-        ctx.translate(particle.x, particle.y)
-        ctx.rotate((particle.rotation * Math.PI) / 180)
-        ctx.fillStyle = particle.color
+        ctx.save();
+        ctx.translate(particle.x, particle.y);
+        ctx.rotate((particle.rotation * Math.PI) / 180);
+        ctx.fillStyle = particle.color;
 
         if (particle.shape === "circle") {
-          ctx.beginPath()
-          ctx.arc(0, 0, particle.size, 0, Math.PI * 2)
-          ctx.fill()
+          ctx.beginPath();
+          ctx.arc(0, 0, particle.size, 0, Math.PI * 2);
+          ctx.fill();
         } else {
-          ctx.fillRect(-particle.size / 2, -particle.size / 2, particle.size, particle.size)
+          ctx.fillRect(
+            -particle.size / 2,
+            -particle.size / 2,
+            particle.size,
+            particle.size
+          );
         }
 
-        ctx.restore()
-      })
+        ctx.restore();
+      });
 
       // Continue animation if not all particles are outside or duration hasn't elapsed
       if (!allOutside && elapsed < duration) {
-        animationRef.current = requestAnimationFrame(animate)
+        animationRef.current = requestAnimationFrame(animate);
       } else {
         // Animation complete
-        setParticles([])
-        if (onComplete) onComplete()
+        setParticles([]);
+        if (onComplete) onComplete();
       }
-    }
+    };
 
-    animationRef.current = requestAnimationFrame(animate)
+    animationRef.current = requestAnimationFrame(animate);
 
     return () => {
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current)
+        cancelAnimationFrame(animationRef.current);
       }
-    }
-  }, [active, particles, width, height, duration, onComplete])
+    };
+  }, [active, particles, width, height, duration, onComplete]);
 
-  if (!active && particles.length === 0) return null
+  if (!active && particles.length === 0) return null;
 
   return (
     <canvas
       ref={canvasRef}
       width={width}
       height={height}
-      className="absolute top-0 left-0 pointer-events-none z-50"
-      aria-hidden="true"
+      className='absolute top-0 left-0 pointer-events-none z-50'
+      aria-hidden='true'
     />
-  )
+  );
 }
