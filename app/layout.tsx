@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Montserrat, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+const geistSans = Montserrat({
+  subsets: ["latin"],
   variable: "--font-geist-sans",
-  weight: "100 900",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+const geistMono = Roboto_Mono({
+  subsets: ["latin"],
   variable: "--font-geist-mono",
-  weight: "100 900",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
