@@ -28,12 +28,14 @@ export function BrutalistComingSoon({ type, className = "" }: BrutalistComingSoo
   // Different messages based on type
   const getMessage = () => {
     switch (type) {
+      case "timeline":
+        return "The timeline will be announced soon. Stay tuned for information about the hackathon schedule and events."
       case "prizes":
-        return "Prize details will be announced soon. Stay tuned for information about our $50,000+ prize pool and special rewards for participants."
+        return "Prize details will be announced soon. Stay tuned for information about our prize pool and special rewards for participants."
       case "prizes-no-amount":
-        return "Prize details will be announced soon. Stay tuned for information about our exclusive prize pool and special rewards for participants. Expect recognition, opportunities, and valuable resources for the winning teams."
+        return "Prize details will be announced soon. Stay tuned for information about our exclusive prize pool and special rewards for participants."
       case "judges":
-        return "Our panel of industry experts and thought leaders will be revealed soon. Expect top professionals from WhatsApp, AI, and tech industries."
+        return "Our panel of expert builders will be revealed soon. Expect top professionals working on products on top of WhatsApp, AI, and more."
       case "mentors":
         return "Technical mentors from various AI and development backgrounds will be announced shortly. They'll help you optimize your solutions during the hackathon."
       default:

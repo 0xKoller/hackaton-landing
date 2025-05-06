@@ -16,7 +16,7 @@ const geistMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: "WhatsApp AI Hackathon | Build AI Agents for 2+ Billion Users",
   description:
-    "Join the WhatsApp AI Hackathon! Build AI agents using LLMs and WhatsApp's Business API. Form teams, win prizes, and reach 2+ billion users. June 7th, 2025, CABA.",
+    "Join the WhatsApp AI Hackathon! Build AI agents using LLMs and WhatsApp's Business API. Form teams, win prizes, and reach 3+ billion users. June 7th, 2025, CABA.",
   keywords: [
     "hackathon",
     "AI",

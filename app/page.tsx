@@ -31,14 +31,14 @@ export default function LandingPage() {
           />
 
           <motion.div
-            className='flex justify-center mt-8'
+            className='flex flex-col sm:flex-row justify-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Button
               size='lg'
-              className='bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
+              className='w-full sm:w-auto bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
               onClick={() => {
                 window.open(
                   "https://docs.google.com/forms/d/e/1FAIpQLScn-QIszixDtIvEAb8nKsnTr0Z3O9erGMDxwoRhkKkxeqbDKg/viewform",
@@ -46,7 +46,19 @@ export default function LandingPage() {
                 );
               }}
             >
-              <span className='relative z-10'>HACK THE CHAT NOW</span>
+              <span className='relative z-10 font-bold'>APPLY INDIVIDUALLY</span>
+            </Button>
+            <Button
+              size='lg'
+              className='w-full sm:w-auto bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
+              onClick={() => {
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLScn-QIszixDtIvEAb8nKsnTr0Z3O9erGMDxwoRhkKkxeqbDKg/viewform",
+                  "_blank"
+                );
+              }}
+            >
+              <span className='relative z-10 font-bold'>APPLY WITH YOUR TEAM</span>
             </Button>
           </motion.div>
         </div>
@@ -63,50 +75,47 @@ export default function LandingPage() {
           {/* Brutalist heading */}
           <BrutalistHeading>
             <span className='block -mb-8'>ABOUT</span>
-            <span className='text-green-500'>HACKATHON</span>
+
           </BrutalistHeading>
 
           <div className='mt-24 grid grid-cols-1 md:grid-cols-2 gap-24'>
             {/* Left column - Event overview */}
             <div>
               <BrutalistText className='mb-8'>
-                This isn&apos;t just another hackathon. It&apos;s your gateway
-                to building AI agents that can reach
+                Welcome to the first in-person event focused on building within the WhatsApp ecosystem — a platform with 
                 <span className='text-green-500 font-bold'>
                   {" "}
-                  2+ billion WhatsApp users
+                  +3 billion users worldwide
                 </span>
-                . Leverage cutting-edge LLMs, WhatsApp&apos;s Business API, and
-                your code to create agents that solve real problems.
+                . Whether through the Business API, Web WhatsApp, or other creative methods, your mission is to ship tools that solve real problems on the most used communication channel on the planet.
               </BrutalistText>
 
               <BrutalistText delay={0.2} className='mb-8'>
                 Form{" "}
                 <span className='text-green-500 font-bold'>
-                  teams of up to 5 people
+                  teams of up to 4 people
                 </span>{" "}
-                with diverse skills. Whether you&apos;re a{" "}
+                with diverse skill sets. Whether you&apos;re a{" "}
                 <span className='text-green-500'>
-                  machine learning engineer
+                  backend developer
                 </span>
-                ,<span className='text-green-500'> full-stack developer</span>,
-                <span className='text-green-500'> product manager</span>,
-                <span className='text-green-500'> designer</span>, or
+                ,<span className='text-green-500'> AI tinkerer</span>,
+                <span className='text-green-500'> product thinker</span>,
+                <span className='text-green-500'> UI/UX expert</span>, or
                 <span className='text-green-500'>
                   {" "}
-                  prompt engineering wizard
+                  automation hacker
                 </span>{" "}
-                — you belong here.
+                — you have a role to play here.
               </BrutalistText>
-
               <BrutalistText delay={0.4} className='mb-16'>
                 We{" "}
                 <span className='text-green-500 font-bold'>
-                  strongly encourage mixed-role teams
+                  strongly encourage cross-functional teams
                 </span>
-                . The most successful projects combine technical excellence with
-                outstanding design and product vision. Build something
-                revolutionary and get noticed by industry leaders.
+                . The most impactful projects combine sharp tech execution with
+                strong design and product insight. Build something bold and make
+                your mark on the future of messaging.
               </BrutalistText>
 
               {/* Event details with brutalist styling and Lucide icons */}
@@ -118,8 +127,8 @@ export default function LandingPage() {
                       strokeWidth={2.5}
                     />
                   }
-                  title='COUNTDOWN ACTIVE'
-                  value='June 7th, 2025 • 24-Hour Hackathon'
+                  title='DATE'
+                  value='June 7th • 8am to 8pm'
                   index={0}
                 />
 
@@ -128,7 +137,7 @@ export default function LandingPage() {
                     <MapPin className='w-8 h-8 text-black' strokeWidth={2.5} />
                   }
                   title='LOCATION'
-                  value='CABA • Coming Soon'
+                  value='BUENOS AIRES • Coming Soon'
                   index={1}
                 />
 
@@ -136,8 +145,8 @@ export default function LandingPage() {
                   icon={
                     <Users className='w-8 h-8 text-black' strokeWidth={2.5} />
                   }
-                  title='TEAM SIZE'
-                  value='Up to 5 people • Mixed roles encouraged'
+                  title='FORMAT'
+                  value='Individual & Teams'
                   index={2}
                 />
 
@@ -145,8 +154,8 @@ export default function LandingPage() {
                   icon={
                     <Trophy className='w-8 h-8 text-black' strokeWidth={2.5} />
                   }
-                  title='PRIZES'
-                  value='Exclusive rewards • Recognition • Opportunities'
+                  title='AWARDS'
+                  value='Product, Business, Creativity'
                   index={3}
                 />
               </div>
@@ -177,7 +186,7 @@ export default function LandingPage() {
                   />
 
                   <h3 className='text-4xl font-black uppercase relative z-10'>
-                    GLAMOROUS PRIZES
+                    EXCLUSIVE PRIZES
                   </h3>
                 </div>
               </motion.div>
@@ -212,7 +221,7 @@ export default function LandingPage() {
           </motion.div>
 
           {/* Timeline Coming Soon (using 'judges' as placeholder type) */}
-          <BrutalistComingSoon type='judges' className='col-span-full' />
+          <BrutalistComingSoon type='timeline' className='col-span-full' />
         </div>
       </section>
 
