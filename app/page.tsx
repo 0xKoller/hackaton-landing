@@ -38,10 +38,10 @@ export default function LandingPage() {
           >
             <Button
               size='lg'
-              className='w-full sm:w-auto bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
+              className='w-full sm:w-[250px] bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
               onClick={() => {
                 window.open(
-                  "https://docs.google.com/forms/d/e/1FAIpQLScn-QIszixDtIvEAb8nKsnTr0Z3O9erGMDxwoRhkKkxeqbDKg/viewform",
+                  "https://forms.gle/nELzhgfeXURg6D66A",
                   "_blank"
                 );
               }}
@@ -50,10 +50,10 @@ export default function LandingPage() {
             </Button>
             <Button
               size='lg'
-              className='w-full sm:w-auto bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
+              className='w-full sm:w-[250px] bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
               onClick={() => {
                 window.open(
-                  "https://docs.google.com/forms/d/e/1FAIpQLScn-QIszixDtIvEAb8nKsnTr0Z3O9erGMDxwoRhkKkxeqbDKg/viewform",
+                  "https://forms.gle/epRB14hsx3LnCYycA",
                   "_blank"
                 );
               }}
@@ -87,21 +87,17 @@ export default function LandingPage() {
                   {" "}
                   +3 billion users worldwide
                 </span>
-                . Whether through the Business API, Web WhatsApp, or other creative methods, your mission is to ship tools that solve real problems on the most used communication channel on the planet.
+                . Whether through the Business API, Web WhatsApp Store or other APIs, you have a full day to ship tools that solve real problems on the most used communication channel on the planet.
               </BrutalistText>
 
               <BrutalistText delay={0.2} className='mb-8'>
-                Form{" "}
-                <span className='text-green-500 font-bold'>
-                  teams of up to 4 people
-                </span>{" "}
-                with diverse skill sets. Whether you&apos;re a{" "}
+                Apply as an individual or with a team (up to 4 people). Whether you&apos;re a{" "}
                 <span className='text-green-500'>
                   backend developer
                 </span>
-                ,<span className='text-green-500'> AI tinkerer</span>,
+                ,<span className='text-green-500'> React developer</span>,
                 <span className='text-green-500'> product thinker</span>,
-                <span className='text-green-500'> UI/UX expert</span>, or
+                <span className='text-green-500'> UI expert</span>, or
                 <span className='text-green-500'>
                   {" "}
                   automation hacker
@@ -109,11 +105,7 @@ export default function LandingPage() {
                 — you have a role to play here.
               </BrutalistText>
               <BrutalistText delay={0.4} className='mb-16'>
-                We{" "}
-                <span className='text-green-500 font-bold'>
-                  strongly encourage cross-functional teams
-                </span>
-                . The most impactful projects combine sharp tech execution with
+                The most impactful projects combine sharp tech execution with
                 strong design and product insight. Build something bold and make
                 your mark on the future of messaging.
               </BrutalistText>
@@ -128,7 +120,7 @@ export default function LandingPage() {
                     />
                   }
                   title='DATE'
-                  value='June 7th • 8am to 8pm'
+                  value='June 7th • 8am-8pm'
                   index={0}
                 />
 
@@ -137,7 +129,7 @@ export default function LandingPage() {
                     <MapPin className='w-8 h-8 text-black' strokeWidth={2.5} />
                   }
                   title='LOCATION'
-                  value='BUENOS AIRES • Coming Soon'
+                  value='Buenos Aires (soon to be revealed)'
                   index={1}
                 />
 
@@ -186,7 +178,7 @@ export default function LandingPage() {
                   />
 
                   <h3 className='text-4xl font-black uppercase relative z-10'>
-                    EXCLUSIVE PRIZES
+                    AWARDS
                   </h3>
                 </div>
               </motion.div>
@@ -280,9 +272,7 @@ export default function LandingPage() {
             </div>
             <div className='mt-6 max-w-2xl'>
               <BrutalistText>
-                Get direct access to industry experts who will help you optimize
-                your code, refine your AI models, and push your technical
-                implementation to the next level.
+                Get direct access to industry experts who will help you ship your code and push your technical implementation to the next level.
               </BrutalistText>
             </div>
           </motion.div>

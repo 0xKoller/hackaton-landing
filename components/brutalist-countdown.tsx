@@ -80,7 +80,7 @@ export function BrutalistCountdown({ targetDate, className = "" }: BrutalistCoun
           <div className="inline-block bg-green-500 px-4 py-2 transform -skew-x-6">
             <h3 className="text-3xl md:text-4xl font-black uppercase text-black">LET'S... HACK THE CHAT</h3>
           </div>
-          <p className="mt-4 text-xl font-mono text-white/80">JUNE 7TH, 2025 • BUENOS AIRES</p>
+          <p className="mt-4 text-xl font-mono text-white/80">June 7th, 2025 • 8am-8pm • Buenos Aires</p>
         </div>
 
         {/* Countdown display */}
