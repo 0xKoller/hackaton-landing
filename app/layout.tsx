@@ -16,16 +16,13 @@ const geistMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: "The First WhatsApp Hackathon | Build for 3+ Billion Users",
   description:
-    "Join the first WhatsApp Hackathon! The first event focused on WhatsApp platform. June 7th, 2025, Buenos Aires, Argentina.",
+    "Join the first WhatsApp Hackathon! An event focused on building innovative solutions for the WhatsApp platform. June 7th, 2025, Buenos Aires, Argentina.",
   keywords: [
     "hackathon",
-    "AI",
     "WhatsApp",
-    "LLM",
     "API",
     "Argentina",
     "CABA",
-    "machine learning",
     "developers",
     "prizes",
     "event",
@@ -33,26 +30,27 @@ export const metadata: Metadata = {
     "team",
     "coding",
     "innovation",
+    "messaging",
   ],
   authors: [{ name: "WhatsApp Hackathon Team" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "WhatsApp AI Hackathon | Build AI Agents for 2+ Billion Users",
+    title: "The First WhatsApp Hackathon | Build for the World's #1 Chat App",
     description:
-      "Join the WhatsApp AI Hackathon! Build AI agents using LLMs and WhatsApp's Business API. Form teams, win prizes, and reach 2+ billion users. June 7th, 2025, CABA.",
+      "Join the first ever WhatsApp Hackathon! Innovate on the WhatsApp platform and reach over 3 billion users. June 7th, 2025, Buenos Aires.",
     url: "https://www.hackthe.chat/",
-    siteName: "WhatsApp AI Hackathon",
+    siteName: "The First WhatsApp Hackathon",
     locale: "en_US",
     type: "website",
     images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WhatsApp AI Hackathon | Build AI Agents for 2+ Billion Users",
+    title: "The First WhatsApp Hackathon | Innovate on WhatsApp",
     description:
-      "Join the WhatsApp AI Hackathon! Build AI agents using LLMs and WhatsApp's Business API. Form teams, win prizes, and reach 2+ billion users. June 7th, 2025, CABA.",
+      "Be part of the first WhatsApp Hackathon! Create solutions for 3+ billion users. June 7th, 2025, Buenos Aires.",
     images: ["/og-image.png"],
     creator: "@0xkoller",
   },
