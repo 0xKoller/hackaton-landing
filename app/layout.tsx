@@ -14,9 +14,9 @@ const geistMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The First WhatsApp Hackathon | Build for 3+ Billion Users",
+  title: "The First WhatsApp Hackathon | Apply",
   description:
-    "Join the first WhatsApp Hackathon! An event focused on building innovative solutions for the WhatsApp platform. June 7th, 2025, Buenos Aires, Argentina.",
+    "Join the first in-person event focused on building on the most popular messaging platform. June 7th, 2025, Buenos Aires, Argentina.",
   keywords: [
     "hackathon",
     "WhatsApp",
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     "innovation",
     "messaging",
   ],
-  authors: [{ name: "WhatsApp Hackathon Team" }],
+  authors: [{ name: "Hack The Chat Team" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "The First WhatsApp Hackathon | Build for the World's #1 Chat App",
+    title: "The First WhatsApp Hackathon | Apply",
     description:
-      "Join the first ever WhatsApp Hackathon! Innovate on the WhatsApp platform and reach over 3 billion users. June 7th, 2025, Buenos Aires.",
+    "Join the first in-person event for building on the most popular chat platform.",
     url: "https://www.hackthe.chat/",
     siteName: "The First WhatsApp Hackathon",
     locale: "en_US",
@@ -48,11 +48,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The First WhatsApp Hackathon | Innovate on WhatsApp",
+    title: "The First WhatsApp Hackathon | Apply",
     description:
-      "Be part of the first WhatsApp Hackathon! Create solutions for 3+ billion users. June 7th, 2025, Buenos Aires.",
+    "Join the first in-person event focused on building on the most popular messaging platform. June 7th, 2025, Buenos Aires, Argentina.",
     images: ["/og-image.png"],
-    creator: "@0xkoller",
+    creator: "@HackTheChat",
   },
   robots: {
     index: true,
