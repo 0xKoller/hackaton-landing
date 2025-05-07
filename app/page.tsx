@@ -58,7 +58,7 @@ export default function LandingPage() {
                 );
               }}
             >
-              <span className='relative z-10 font-bold'>APPLY WITH YOUR TEAM</span>
+              <span className='relative z-10 font-bold'>APPLY WITH TEAM</span>
             </Button>
           </motion.div>
         </div>
