@@ -59,7 +59,11 @@
 
 /* Cyberpunk Grid */
 .cyberpunk-grid {
-  background-image: linear-gradient(to right, rgba(37, 211, 102, 0.1) 1px, transparent 1px),
+  background-image: linear-gradient(
+      to right,
+      rgba(37, 211, 102, 0.1) 1px,
+      transparent 1px
+    ),
     linear-gradient(to bottom, rgba(37, 211, 102, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }
@@ -251,11 +255,13 @@
 
 /* Neon effect */
 .neon-text {
-  text-shadow: 0 0 5px rgba(37, 211, 102, 0.7), 0 0 10px rgba(37, 211, 102, 0.5), 0 0 15px rgba(37, 211, 102, 0.3);
+  text-shadow: 0 0 5px rgba(37, 211, 102, 0.7), 0 0 10px rgba(37, 211, 102, 0.5),
+    0 0 15px rgba(37, 211, 102, 0.3);
 }
 
 .neon-border {
-  box-shadow: 0 0 5px rgba(37, 211, 102, 0.7), 0 0 10px rgba(37, 211, 102, 0.5), inset 0 0 5px rgba(37, 211, 102, 0.2);
+  box-shadow: 0 0 5px rgba(37, 211, 102, 0.7), 0 0 10px rgba(37, 211, 102, 0.5),
+    inset 0 0 5px rgba(37, 211, 102, 0.2);
 }
 
 /* Scanlines effect */
@@ -271,7 +277,12 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: repeating-linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.05) 0.5%, transparent 1%);
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.05) 0.5%,
+    transparent 1%
+  );
   pointer-events: none;
   z-index: 10;
 }
@@ -279,4 +290,19 @@
 /* Digital circuit pattern */
 .circuit-pattern {
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10h80v80H10z' fill='none' stroke='%2325D366' stroke-width='0.5' stroke-opacity='0.1'/%3E%3Cpath d='M30 10v20m0 20v20m0 20v10M10 30h20m20 0h20m20 0h10M70 10v20m0 20v20m0 20v10M10 70h20m20 0h20m20 0h10' stroke='%2325D366' stroke-width='0.5' stroke-opacity='0.1'/%3E%3Ccircle cx='30' cy='30' r='2' fill='%2325D366' fill-opacity='0.1'/%3E%3Ccircle cx='70' cy='30' r='2' fill='%2325D366' fill-opacity='0.1'/%3E%3Ccircle cx='30' cy='70' r='2' fill='%2325D366' fill-opacity='0.1'/%3E%3Ccircle cx='70' cy='70' r='2' fill='%2325D366' fill-opacity='0.1'/%3E%3C/svg%3E");
+}
+
+.filter-gray-monochrome {
+  filter: grayscale(1) brightness(0.7) contrast(1.2);
+}
+
+.brutalist-tooltip {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: monospace;
+  border-radius: 0;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #22c55e;
+  box-shadow: 4px 4px 0 #22c55e, 0 0 0 #000;
 }

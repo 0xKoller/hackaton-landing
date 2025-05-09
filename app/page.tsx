@@ -5,6 +5,7 @@ import { BrutalistText } from "@/components/brutalist-text";
 import { BrutalistEventDetail } from "@/components/brutalist-event-detail";
 import { BrutalistComingSoon } from "@/components/brutalist-coming-soon";
 import { BrutalistCountdown } from "@/components/brutalist-countdown";
+import { BrutalistSponsorSection } from "@/components/brutalist-sponsor-section";
 // import { BrutalistTimeline } from "@/components/brutalist-timeline";
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -187,6 +188,9 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* Sponsor Section */}
+      <BrutalistSponsorSection />
 
       {/* Timeline Section */}
       <section className='bg-zinc-950 py-16 md:py-24 relative overflow-hidden'>
