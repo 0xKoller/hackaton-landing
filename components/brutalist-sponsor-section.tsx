@@ -18,11 +18,11 @@ const sponsors: Sponsor[] = [
     logo: "https://www.voltchat.com/logo/logo_black.svg",
     url: "https://www.voltchat.com/",
   },
-  // {
-  //   name: "DeRecruiters",
-  //   logo: "https://www.derecruiters.com/favicon.svg",
-  //   url: "https://www.derecruiters.com/",
-  // },
+  {
+    name: "DeRecruiters",
+    logo: "/deRecruiters.png",
+    url: "https://www.derecruiters.com/",
+  },
   {
     name: "HIT",
     logo: "https://hitcowork.co/images/Logo_hit_b.svg",
@@ -41,6 +41,15 @@ function isExternalSVG(url: string) {
 }
 
 export function BrutalistSponsorSection() {
+  // Generate a random phase and sideways offset for each sponsor for organic movement
+  const levitationConfigs = sponsors.map((_, i) => {
+    // Randomize phase and sideways amplitude
+    const phase = Math.random() * Math.PI * 2;
+    const xAmplitude = Math.random() < 0.5 ? 0 : Math.random() * 8 + 4; // 0 or 4-12px
+    const xDirection = Math.random() < 0.5 ? 1 : -1;
+    return { phase, xAmplitude, xDirection };
+  });
+
   return (
     <section className='bg-green-500 py-16 md:py-24 relative overflow-hidden'>
       <div className='absolute -left-20 top-0 text-[20rem] font-black text-black/10 select-none'>
@@ -62,40 +71,66 @@ export function BrutalistSponsorSection() {
             </div>
           </div>
         </motion.div>
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-center'>
-          {sponsors.map((sponsor) => (
-            <motion.a
-              key={sponsor.name}
-              href={sponsor.url}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex flex-col items-center justify-center relative group'
-              whileHover={{ scale: 1.15, y: -10 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              {/* Tooltip */}
-              <span className='opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-green-500 px-4 py-2 rounded font-mono text-sm font-bold z-20 shadow-lg border-2 border-green-500 brutalist-tooltip pointer-events-none'>
-                {sponsor.name}
-              </span>
-              {isExternalSVG(sponsor.logo) ? (
-                <img
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  style={{ height: 110, maxWidth: 240 }}
-                  className='object-contain h-[110px] w-auto filter-gray-monochrome transition-transform duration-200'
-                  loading='lazy'
-                />
-              ) : (
-                <Image
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  width={240}
-                  height={110}
-                  className='object-contain h-[110px] w-auto filter-gray-monochrome transition-transform duration-200'
-                />
-              )}
-            </motion.a>
-          ))}
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-y-8 md:gap-12 items-center justify-center'>
+          {sponsors.map((sponsor, idx) => {
+            const { phase, xAmplitude, xDirection } = levitationConfigs[idx];
+            return (
+              <motion.a
+                key={sponsor.name}
+                href={sponsor.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='flex flex-col items-center justify-center relative group'
+                whileHover={{ scale: 1.15, y: -10 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                {/* Tooltip */}
+                <span className='opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-green-500 px-4 py-2 rounded font-mono text-sm font-bold z-20 shadow-lg border-2 border-green-500 brutalist-tooltip pointer-events-none'>
+                  {sponsor.name}
+                </span>
+                <motion.div
+                  animate={{
+                    y: [0, -12, 0, 12, 0],
+                    x: xAmplitude
+                      ? [
+                          0,
+                          xAmplitude * xDirection,
+                          0,
+                          -xAmplitude * xDirection,
+                          0,
+                        ]
+                      : 0,
+                  }}
+                  transition={{
+                    duration: 4 + Math.random() * 2, // 4-6s
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut",
+                    delay: phase, // randomize start
+                  }}
+                  style={{ display: "flex" }}
+                >
+                  {isExternalSVG(sponsor.logo) ? (
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      style={{ maxWidth: 240 }}
+                      className='object-contain h-[60px] md:h-[110px] w-auto filter-gray-monochrome hover:filter-none transition-transform duration-200'
+                      loading='lazy'
+                    />
+                  ) : (
+                    <Image
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      width={240}
+                      height={110}
+                      className='object-contain h-[60px] md:h-[110px] w-auto filter-gray-monochrome hover:filter-none transition-transform duration-200'
+                    />
+                  )}
+                </motion.div>
+              </motion.a>
+            );
+          })}
         </div>
       </div>
     </section>

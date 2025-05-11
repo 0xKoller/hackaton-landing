@@ -63,7 +63,7 @@ export default function LandingPage() {
         <div className='px-4 md:px-12 lg:px-24 relative z-10 max-w-[1800px] mx-auto'>
           {/* Brutalist heading */}
           <BrutalistHeading>
-            <span className='block -mb-8'>ABOUT</span>
+            <span className='block md:-mb-2'>ABOUT</span>
             <span className='text-green-500'>HACKATHON</span>
           </BrutalistHeading>
 
