@@ -6,10 +6,13 @@ import { BrutalistEventDetail } from "@/components/brutalist-event-detail";
 import { BrutalistComingSoon } from "@/components/brutalist-coming-soon";
 import { BrutalistCountdown } from "@/components/brutalist-countdown";
 // import { BrutalistTimeline } from "@/components/brutalist-timeline";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { useRef } from "react";
 import { Calendar, MapPin, Users, Trophy } from "lucide-react";
 // import { timelineEvents } from "@/data/timeline";
+
+// Replace motion.div with proper typing
+const MotionDiv = motion.div as React.ComponentType<HTMLMotionProps<"div">>;
 
 export default function LandingPage() {
   const prizesRef = useRef<HTMLDivElement>(null);
@@ -30,37 +33,44 @@ export default function LandingPage() {
             className='max-w-4xl mx-auto'
           />
 
-          <motion.div
-            className='flex flex-col sm:flex-row justify-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4'
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <Button
-              size='lg'
-              className='w-full sm:w-[250px] bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
-              onClick={() => {
-                window.open(
-                  "https://forms.gle/nELzhgfeXURg6D66A",
-                  "_blank"
-                );
-              }}
+          <div className='flex flex-col sm:flex-row justify-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4'>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <span className='relative z-10 font-bold'>APPLY INDIVIDUALLY</span>
-            </Button>
-            <Button
-              size='lg'
-              className='w-full sm:w-[250px] bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
-              onClick={() => {
-                window.open(
-                  "https://forms.gle/epRB14hsx3LnCYycA",
-                  "_blank"
-                );
-              }}
+              <Button
+                size='lg'
+                className='w-full sm:w-[250px] bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
+                onClick={() => {
+                  window.open(
+                    "https://forms.gle/nELzhgfeXURg6D66A",
+                    "_blank"
+                  );
+                }}
+              >
+                <span className='relative z-10 font-bold'>APPLY INDIVIDUALLY</span>
+              </Button>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <span className='relative z-10 font-bold'>APPLY WITH TEAM</span>
-            </Button>
-          </motion.div>
+              <Button
+                size='lg'
+                className='w-full sm:w-[250px] bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
+                onClick={() => {
+                  window.open(
+                    "https://forms.gle/epRB14hsx3LnCYycA",
+                    "_blank"
+                  );
+                }}
+              >
+                <span className='relative z-10 font-bold'>APPLY WITH TEAM</span>
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -183,7 +193,7 @@ export default function LandingPage() {
                 </div>
               </motion.div>
 
-              <BrutalistComingSoon type='prizes-no-amount' className='mt-8' />
+              <BrutalistComingSoon type='prizes' className='col-span-full' />
             </div>
           </div>
         </div>
