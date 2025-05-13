@@ -15,7 +15,7 @@ const sponsors: Sponsor[] = [
   },
   {
     name: "VoltChat",
-    logo: "https://www.voltchat.com/logo/logo_black.svg",
+    logo: "/volt.png",
     url: "https://www.voltchat.com/",
   },
   {
@@ -25,7 +25,7 @@ const sponsors: Sponsor[] = [
   },
   {
     name: "HIT",
-    logo: "https://hitcowork.co/images/Logo_hit_b.svg",
+    logo: "/hit.png",
     url: "https://hitcowork.co/",
   },
   {
