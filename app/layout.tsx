@@ -14,18 +14,15 @@ const geistMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WhatsApp AI Hackathon | Build AI Agents for 2+ Billion Users",
+  title: "The First WhatsApp Hackathon | Apply",
   description:
-    "Join the WhatsApp AI Hackathon! Build AI agents using LLMs and WhatsApp's Business API. Form teams, win prizes, and reach 2+ billion users. June 7th, 2025, CABA.",
+    "Join the first in-person event focused on building on the most popular messaging platform. June 7th, 2025, Buenos Aires, Argentina.",
   keywords: [
     "hackathon",
-    "AI",
     "WhatsApp",
-    "LLM",
     "API",
     "Argentina",
     "CABA",
-    "machine learning",
     "developers",
     "prizes",
     "event",
@@ -33,28 +30,29 @@ export const metadata: Metadata = {
     "team",
     "coding",
     "innovation",
+    "messaging",
   ],
-  authors: [{ name: "WhatsApp Hackathon Team" }],
+  authors: [{ name: "Hack The Chat Team" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "WhatsApp AI Hackathon | Build AI Agents for 2+ Billion Users",
+    title: "The First WhatsApp Hackathon | Apply",
     description:
-      "Join the WhatsApp AI Hackathon! Build AI agents using LLMs and WhatsApp's Business API. Form teams, win prizes, and reach 2+ billion users. June 7th, 2025, CABA.",
+    "Join the first in-person event for building on the most popular chat platform.",
     url: "https://www.hackthe.chat/",
-    siteName: "WhatsApp AI Hackathon",
+    siteName: "The First WhatsApp Hackathon",
     locale: "en_US",
     type: "website",
     images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WhatsApp AI Hackathon | Build AI Agents for 2+ Billion Users",
+    title: "The First WhatsApp Hackathon | Apply",
     description:
-      "Join the WhatsApp AI Hackathon! Build AI agents using LLMs and WhatsApp's Business API. Form teams, win prizes, and reach 2+ billion users. June 7th, 2025, CABA.",
+    "Join the first in-person event focused on building on the most popular messaging platform. June 7th, 2025, Buenos Aires, Argentina.",
     images: ["/og-image.png"],
-    creator: "@0xkoller",
+    creator: "@HackTheChat",
   },
   robots: {
     index: true,
