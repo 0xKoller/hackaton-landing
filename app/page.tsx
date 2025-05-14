@@ -10,7 +10,7 @@ import { BrutalistSponsorSection } from "@/components/brutalist-sponsor-section"
 import { motion, HTMLMotionProps } from "framer-motion";
 import { useRef } from "react";
 import { Calendar, MapPin, Users, Trophy } from "lucide-react";
-import { judges } from "@/data/judges";
+import { filteredJudges as judges } from "@/data/judges";
 import { mentors } from "@/data/mentors";
 import { BrutalistJudgesCarousel } from "@/components/brutalist-judges-carousel";
 
@@ -255,8 +255,8 @@ export default function LandingPage() {
           </motion.div>
 
           {/* Judges FlagCarousel or Coming Soon */}
-          {/* <BrutalistJudgesCarousel judges={judges} /> */}
-          <BrutalistComingSoon type='judges' className='col-span-full' />
+          <BrutalistJudgesCarousel judges={judges} />
+          {/* <BrutalistComingSoon type='judges' className='col-span-full' /> */}
         </div>
       </section>
 
@@ -279,7 +279,7 @@ export default function LandingPage() {
             <div className='inline-block'>
               <div className='bg-green-500 px-6 py-3 text-black'>
                 <h2 className='text-6xl md:text-8xl font-black uppercase leading-none'>
-                  TECH MENTORS
+                  MENTORS
                 </h2>
               </div>
             </div>

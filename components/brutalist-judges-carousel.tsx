@@ -88,7 +88,8 @@ export function BrutalistJudgesCarousel({
 
   return (
     <motion.div
-      className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 ${className}`}
+      className={`flex flex-wrap justify-center gap-10 ${className}`}
+      style={{ alignItems: "stretch" }}
       variants={containerVariants}
       initial='hidden'
       animate='visible'
@@ -101,6 +102,13 @@ export function BrutalistJudgesCarousel({
             whileHover='hover'
             transition={{ layout: { duration: 0.3 } }}
             layout
+            style={{
+              flex: "1 0 340px",
+              maxWidth: 420,
+              minWidth: 340,
+              display: "flex",
+              justifyContent: "center",
+            }}
           >
             <BrutalistJudgeCard
               name={judge.name}
@@ -114,7 +122,17 @@ export function BrutalistJudgesCarousel({
             />
           </motion.div>
         ) : (
-          <ComingSoonJudgeCard key={`coming-soon-${idx}`} index={idx} />
+          <div
+            style={{
+              flex: "1 0 340px",
+              maxWidth: 420,
+              minWidth: 340,
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <ComingSoonJudgeCard key={`coming-soon-${idx}`} index={idx} />
+          </div>
         )
       )}
     </motion.div>

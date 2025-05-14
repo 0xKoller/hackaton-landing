@@ -68,8 +68,8 @@ export function BrutalistJudgeCard({
           {/* Gradient fade at the top for smooth blending */}
           <div className='absolute left-0 right-0 top-0 h-[170px] bg-gradient-to-t from-black/70 to-transparent pointer-events-none rounded-t-lg  ' />
           <div className='mb-4 relative z-10'>
-            <h4 className='text-xl font-bold text-green-500'>{title}</h4>
-            <p className='text-white/80 font-mono text-sm mt-2'>{bio}</p>
+            <h3 className='text-xl font-bold text-green-500'>{title}</h3>
+            <h4 className='text-xs font-mono text-white/80'>{position}</h4>
           </div>
           <div className='flex gap-4 relative z-10'>
             {linkedin && (
