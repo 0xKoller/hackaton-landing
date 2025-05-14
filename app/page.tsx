@@ -10,6 +10,10 @@ import { BrutalistSponsorSection } from "@/components/brutalist-sponsor-section"
 import { motion, HTMLMotionProps } from "framer-motion";
 import { useRef } from "react";
 import { Calendar, MapPin, Users, Trophy } from "lucide-react";
+import { judges } from "@/data/judges";
+import { mentors } from "@/data/mentors";
+import { BrutalistJudgesCarousel } from "@/components/brutalist-judges-carousel";
+
 // import { timelineEvents } from "@/data/timeline";
 
 // Replace motion.div with proper typing
@@ -44,13 +48,12 @@ export default function LandingPage() {
                 size='lg'
                 className='w-full sm:w-[250px] bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
                 onClick={() => {
-                  window.open(
-                    "https://forms.gle/nELzhgfeXURg6D66A",
-                    "_blank"
-                  );
+                  window.open("https://forms.gle/nELzhgfeXURg6D66A", "_blank");
                 }}
               >
-                <span className='relative z-10 font-bold'>APPLY INDIVIDUALLY</span>
+                <span className='relative z-10 font-bold'>
+                  APPLY INDIVIDUALLY
+                </span>
               </Button>
             </motion.div>
             <motion.div
@@ -62,10 +65,7 @@ export default function LandingPage() {
                 size='lg'
                 className='w-full sm:w-[250px] bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
                 onClick={() => {
-                  window.open(
-                    "https://forms.gle/epRB14hsx3LnCYycA",
-                    "_blank"
-                  );
+                  window.open("https://forms.gle/epRB14hsx3LnCYycA", "_blank");
                 }}
               >
                 <span className='relative z-10 font-bold'>APPLY WITH TEAM</span>
@@ -86,34 +86,32 @@ export default function LandingPage() {
           {/* Brutalist heading */}
           <BrutalistHeading>
             <span className='block -mb-8'>ABOUT</span>
-
           </BrutalistHeading>
 
           <div className='mt-24 grid grid-cols-1 md:grid-cols-2 gap-24'>
             {/* Left column - Event overview */}
             <div>
               <BrutalistText className='mb-8'>
-                Welcome to the first in-person event focused on building within the WhatsApp ecosystem — a platform with 
+                Welcome to the first in-person event focused on building within
+                the WhatsApp ecosystem — a platform with
                 <span className='text-green-500 font-bold'>
                   {" "}
                   +3 billion users worldwide
                 </span>
-                . Whether through the Business API, Web WhatsApp Store or other APIs, you have a full day to ship tools that solve real problems on the most used communication channel on the planet.
+                . Whether through the Business API, Web WhatsApp Store or other
+                APIs, you have a full day to ship tools that solve real problems
+                on the most used communication channel on the planet.
               </BrutalistText>
 
               <BrutalistText delay={0.2} className='mb-8'>
-                Apply as an individual or with a team (up to 4 people). Whether you&apos;re a{" "}
-                <span className='text-green-500'>
-                  backend developer
-                </span>
-                ,<span className='text-green-500'> React developer</span>,
+                Apply as an individual or with a team (up to 4 people). Whether
+                you&apos;re a{" "}
+                <span className='text-green-500'>backend developer</span>,
+                <span className='text-green-500'> React developer</span>,
                 <span className='text-green-500'> product thinker</span>,
                 <span className='text-green-500'> UI expert</span>, or
-                <span className='text-green-500'>
-                  {" "}
-                  automation hacker
-                </span>{" "}
-                — you have a role to play here.
+                <span className='text-green-500'> automation hacker</span> — you
+                have a role to play here.
               </BrutalistText>
               <BrutalistText delay={0.4} className='mb-16'>
                 The most impactful projects combine sharp tech execution with
@@ -256,8 +254,8 @@ export default function LandingPage() {
             </div>
           </motion.div>
 
-          {/* Judges Coming Soon */}
-          <BrutalistComingSoon type='judges' className='col-span-full' />
+          {/* Judges FlagCarousel or Coming Soon */}
+          <BrutalistJudgesCarousel judges={judges} />
         </div>
       </section>
 
@@ -286,12 +284,14 @@ export default function LandingPage() {
             </div>
             <div className='mt-6 max-w-2xl'>
               <BrutalistText>
-                Get direct access to industry experts who will help you ship your code and push your technical implementation to the next level.
+                Get direct access to industry experts who will help you ship
+                your code and push your technical implementation to the next
+                level.
               </BrutalistText>
             </div>
           </motion.div>
 
-          {/* Mentors Coming Soon */}
+          {/* Mentors FlagCarousel or Coming Soon */}
           <BrutalistComingSoon type='mentors' className='col-span-full' />
         </div>
       </section>

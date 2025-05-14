@@ -33,6 +33,11 @@ const sponsors: Sponsor[] = [
     logo: "https://cdn.prod.website-files.com/66dcd014322ea9965fa61f03/681b7d62588dff390cd99c73_Imagotipo.svg",
     url: "https://www.getdarwin.ai/",
   },
+  {
+    name: "Yalo",
+    logo: "/yalo.png",
+    url: "https://www.yalo.ai/",
+  },
 ];
 
 // Utility to check if logo is an external SVG
