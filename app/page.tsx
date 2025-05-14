@@ -255,7 +255,8 @@ export default function LandingPage() {
           </motion.div>
 
           {/* Judges FlagCarousel or Coming Soon */}
-          <BrutalistJudgesCarousel judges={judges} />
+          {/* <BrutalistJudgesCarousel judges={judges} /> */}
+          <BrutalistComingSoon type='judges' className='col-span-full' />
         </div>
       </section>
 

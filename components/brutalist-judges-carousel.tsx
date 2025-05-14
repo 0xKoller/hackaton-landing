@@ -110,6 +110,7 @@ export function BrutalistJudgesCarousel({
               index={idx}
               x={judge.x}
               linkedin={judge.linkedin}
+              position={judge.position}
             />
           </motion.div>
         ) : (

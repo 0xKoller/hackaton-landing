@@ -12,6 +12,7 @@ interface BrutalistJudgeCardProps {
   index: number;
   x?: string;
   linkedin?: string;
+  position?: string;
 }
 
 export function BrutalistJudgeCard({
@@ -22,6 +23,7 @@ export function BrutalistJudgeCard({
   index,
   x,
   linkedin,
+  position,
 }: BrutalistJudgeCardProps) {
   return (
     <motion.div
@@ -48,7 +50,7 @@ export function BrutalistJudgeCard({
         </div>
 
         {/* Content overlays */}
-        <div className='absolute bottom-0 left-0 right-0 z-20 p-4'>
+        <div className='hidden  md:flex absolute bottom-0 left-0 right-0 z-20 p-4'>
           <div className='bg-green-500 inline-block px-4 py-2 mb-2 rounded transition-all duration-300 opacity-100 translate-y-0 group-hover:opacity-0 group-hover:pointer-events-none'>
             <h3 className='text-3xl font-black uppercase text-black text-center'>
               {name}
@@ -92,6 +94,27 @@ export function BrutalistJudgeCard({
             )}
           </div>
         </motion.div>
+
+        <div className='flex items-end justify-evenly sm:hidden absolute bottom-0 left-0 right-0 z-20 p-4'>
+          <div className='bg-green-500 inline-block w-fit max-w-2/3 px-3 py-1 mb-1 rounded transition-all duration-300 opacity-100 translate-y-0 group-hover:opacity-0 group-hover:pointer-events-none text-left'>
+            <h3 className='text-lg font-black uppercase text-black'>{title}</h3>
+            <h4 className='text-xs font-mono text-white/80'>{position}</h4>
+          </div>
+          <div className=' inline-block py-2 mb-2 w-1/3 rounded transition-all duration-300 opacity-100 translate-y-0 group-hover:opacity-0 group-hover:pointer-events-none'>
+            <div className='flex justify-end gap-4'>
+              {linkedin && (
+                <a href={linkedin} target='_blank' rel='noopener noreferrer'>
+                  <Linkedin size={28} />
+                </a>
+              )}
+              {x && (
+                <a href={x} target='_blank' rel='noopener noreferrer'>
+                  <X size={28} />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     </motion.div>
   );
