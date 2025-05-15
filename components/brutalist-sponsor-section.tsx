@@ -13,6 +13,11 @@ const sponsors: Sponsor[] = [
     logo: "https://squads.ventures/wp-content/uploads/2023/11/Logo.svg",
     url: "https://squads.ventures/",
   },
+  // {
+  //   name: "Vercel",
+  //   logo: "/vercel.png",
+  //   url: "https://vercel.com/",
+  // },
   {
     name: "VoltChat",
     logo: "/volt.png",
@@ -37,6 +42,11 @@ const sponsors: Sponsor[] = [
     name: "Yalo",
     logo: "/yalo.png",
     url: "https://www.yalo.ai/",
+  },
+  {
+    name: "The Network",
+    logo: "/the-network.png",
+    url: "https://www.thenetwork.com/",
   },
 ];
 
@@ -85,7 +95,7 @@ export function BrutalistSponsorSection() {
                 href={sponsor.url}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex flex-col items-center justify-center relative group'
+                className='flex m-1 flex-col items-center justify-center relative group'
                 whileHover={{ scale: 1.15, y: -10 }}
                 whileTap={{ scale: 0.97 }}
               >
