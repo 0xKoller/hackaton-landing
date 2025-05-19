@@ -13,11 +13,11 @@ const sponsors: Sponsor[] = [
     logo: "https://squads.ventures/wp-content/uploads/2023/11/Logo.svg",
     url: "https://squads.ventures/",
   },
-  // {
-  //   name: "Vercel",
-  //   logo: "/vercel.png",
-  //   url: "https://vercel.com/",
-  // },
+  {
+    name: "Vercel",
+    logo: "/vercel.png",
+    url: "https://vercel.com/",
+  },
   {
     name: "VoltChat",
     logo: "/volt.png",
