@@ -11,13 +11,8 @@ import { motion, HTMLMotionProps } from "framer-motion";
 import { useRef } from "react";
 import { Calendar, MapPin, Users, Trophy } from "lucide-react";
 import { filteredJudges as judges } from "@/data/judges";
-import { mentors } from "@/data/mentors";
+import { filteredMentors } from "@/data/mentors";
 import { BrutalistJudgesCarousel } from "@/components/brutalist-judges-carousel";
-
-// import { timelineEvents } from "@/data/timeline";
-
-// Replace motion.div with proper typing
-const MotionDiv = motion.div as React.ComponentType<HTMLMotionProps<"div">>;
 
 export default function LandingPage() {
   const prizesRef = useRef<HTMLDivElement>(null);
@@ -293,7 +288,7 @@ export default function LandingPage() {
           </motion.div>
 
           {/* Mentors FlagCarousel or Coming Soon */}
-          <BrutalistComingSoon type='mentors' className='col-span-full' />
+          <BrutalistJudgesCarousel judges={filteredMentors} />
         </div>
       </section>
     </div>

@@ -10,7 +10,7 @@ export const judges = [
     x: "https://x.com/markerdiaz",
     linkedin:
       "https://www.linkedin.com/in/marcos-andr%C3%A9s-d%C3%ADaz-olmos-80b285130/",
-    availableDate: "2024-05-14",
+    availableDate: "2025-05-14",
   },
   {
     index: 1,
@@ -22,7 +22,7 @@ export const judges = [
     bio: "Expert in machine learning and scalable systems.",
     x: "https://x.com/software_valen",
     linkedin: "https://www.linkedin.com/in/valentin-fernandez-radovich/",
-    availableDate: "2024-05-22",
+    availableDate: "2025-05-21",
   },
   {
     index: 2,
@@ -34,7 +34,7 @@ export const judges = [
     bio: "Expert in machine learning and scalable systems.",
     // x: "https://x.com/software_valen",
     linkedin: "https://www.linkedin.com/in/esculli/",
-    availableDate: "2024-05-25",
+    availableDate: "2025-05-23",
   },
   {
     index: 3,
@@ -46,7 +46,7 @@ export const judges = [
     bio: "Expert in machine learning and scalable systems.",
     // x: "https://x.com/software_valen",
     linkedin: "https://www.linkedin.com/in/martinpalombo/",
-    availableDate: "2024-06-01",
+    availableDate: "2025-06-01",
   },
   {
     index: 4,
@@ -58,7 +58,7 @@ export const judges = [
     bio: "Expert in machine learning and scalable systems.",
     x: "https://x.com/waismaan",
     linkedin: "https://www.linkedin.com/in/gonzalowaisman/",
-    availableDate: "2024-06-05",
+    availableDate: "2025-05-20",
   },
   {
     index: 5,
@@ -70,7 +70,7 @@ export const judges = [
     bio: "Expert in machine learning and scalable systems.",
     x: "https://x.com/mbeaudroit",
     linkedin: "https://www.linkedin.com/in/mbeaudroit/",
-    availableDate: "2024-06-08",
+    availableDate: "2025-06-02",
   },
 ];
 
@@ -79,7 +79,7 @@ function normalizeDate(dateStr: string) {
   return new Date(d.getFullYear(), d.getMonth(), d.getDate());
 }
 
-const today = new Date("2024-05-14"); // <-- for testing, set to real date in prod
+const today = new Date(new Date().toISOString().slice(0, 10));
 export const filteredJudges = judges.filter((judge) => {
   const judgeDate = normalizeDate(judge.availableDate);
   const todayDate = normalizeDate(today.toISOString().slice(0, 10));

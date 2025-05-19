@@ -40,7 +40,7 @@ function ComingSoonJudgeCard({ index }: { index: number }) {
         <span className='text-4xl font-black uppercase text-green-500 mb-2'>
           Coming Soon
         </span>
-        <span className='text-white/60 font-mono'>Jury Reveal</span>
+        <span className='text-white/60 font-mono'>Reveal</span>
       </div>
     </motion.div>
   );
