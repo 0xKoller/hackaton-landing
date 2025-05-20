@@ -24,6 +24,26 @@ const sponsors: Sponsor[] = [
     url: "https://www.voltchat.com/",
   },
   {
+    name: "realME",
+    logo: "/realme.png",
+    url: "https://www.instagram.com/realme_arg/",
+  },
+  {
+    name: "The Network",
+    logo: "/the-network.png",
+    url: "https://www.thenetwork.com/",
+  },
+  // {
+  //   name: "basement",
+  //   logo: "/basement.png",
+  //   url: "https://basement.studio/",
+  // },
+  {
+    name: "123Seguro",
+    logo: "/123seguro.png",
+    url: "https://www.123seguro.com/",
+  },
+  {
     name: "DeRecruiters",
     logo: "/deRecruiters.png",
     url: "https://www.derecruiters.com/",
@@ -42,11 +62,6 @@ const sponsors: Sponsor[] = [
     name: "Yalo",
     logo: "/yalo.png",
     url: "https://www.yalo.ai/",
-  },
-  {
-    name: "The Network",
-    logo: "/the-network.png",
-    url: "https://www.thenetwork.com/",
   },
 ];
 

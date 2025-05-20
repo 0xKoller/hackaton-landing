@@ -288,7 +288,7 @@ export default function LandingPage() {
           </motion.div>
 
           {/* Mentors FlagCarousel or Coming Soon */}
-          <BrutalistJudgesCarousel judges={filteredMentors} />
+          <BrutalistJudgesCarousel judges={filteredMentors as any} />
         </div>
       </section>
     </div>
