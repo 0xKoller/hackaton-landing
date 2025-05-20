@@ -40,7 +40,7 @@ const sponsors: Sponsor[] = [
   // },
   {
     name: "123Seguro",
-    logo: "/123seguro.png",
+    logo: "/123Seguro.png",
     url: "https://www.123seguro.com/",
   },
   {
