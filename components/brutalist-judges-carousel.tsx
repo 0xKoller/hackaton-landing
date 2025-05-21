@@ -83,7 +83,7 @@ export function BrutalistJudgesCarousel({
   // Always show 6 cards
   const cards = [
     ...judges,
-    ...Array(Math.max(0, 6 - judges.length)).fill(null),
+    ...Array(Math.max(0, 7 - judges.length)).fill(null),
   ];
 
   return (

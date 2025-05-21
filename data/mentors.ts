@@ -12,7 +12,7 @@ export const mentors = [
   },
   {
     id: "federico_lombardozi",
-    name: "Federico Lombardozi",
+    name: "Federico Lombardozzi",
     position: "SWE @ Volt",
     image: "/mentors/federico.jpeg",
     bio: "Open source contributor and web technologies expert.",
@@ -69,6 +69,17 @@ export const mentors = [
     x: "https://x.com/federicomolina",
     linkedin: "https://www.linkedin.com/in/federicomolina86/",
     availableDate: "2025-06-04",
+  },
+  {
+    id: "papa",
+    name: "Papa",
+    position: "Software Wizard @ ScaleAI & Organizer @ ShipBA",
+    image: "/mentors/federico_molina.jpg",
+    bio: "Pioneer in advanced prompt engineering techniques. Developed frameworks for creating robust, context-aware conversational agents.",
+    x: "https://x.com/sebipaps",
+    linkedin:
+      "https://www.linkedin.com/in/sebasti%C3%A1n-papanicolau-10baa91b1/",
+    availableDate: "2025-05-28",
   },
 ];
 
