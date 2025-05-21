@@ -33,11 +33,11 @@ const sponsors: Sponsor[] = [
     logo: "/the-network.png",
     url: "https://www.thenetwork.com/",
   },
-  // {
-  //   name: "basement",
-  //   logo: "/basement.png",
-  //   url: "https://basement.studio/",
-  // },
+  {
+    name: "basement",
+    logo: "/basement.svg",
+    url: "https://basement.studio/",
+  },
   {
     name: "123Seguro",
     logo: "/123Seguro.png",
