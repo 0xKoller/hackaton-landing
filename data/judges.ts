@@ -22,7 +22,7 @@ export const judges = [
     bio: "Expert in machine learning and scalable systems.",
     x: "https://x.com/software_valen",
     linkedin: "https://www.linkedin.com/in/valentin-fernandez-radovich/",
-    availableDate: "2025-05-21",
+    availableDate: "2025-05-22",
   },
   {
     index: 2,
