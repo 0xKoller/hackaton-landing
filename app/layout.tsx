@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Roboto_Mono } from "next/font/google";
 import "./global.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Montserrat({
   subsets: ["latin"],
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The First WhatsApp Hackathon | Apply",
     description:
-    "Join the first in-person event for building on the most popular chat platform.",
+      "Join the first in-person event for building on the most popular chat platform.",
     url: "https://www.hackthe.chat/",
     siteName: "The First WhatsApp Hackathon",
     locale: "en_US",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The First WhatsApp Hackathon | Apply",
     description:
-    "Join the first in-person event focused on building on the most popular messaging platform. June 7th, 2025, Buenos Aires, Argentina.",
+      "Join the first in-person event focused on building on the most popular messaging platform. June 7th, 2025, Buenos Aires, Argentina.",
     images: ["/og-image.png"],
     creator: "@HackTheChat",
   },
@@ -72,6 +73,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
