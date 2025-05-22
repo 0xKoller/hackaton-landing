@@ -28,7 +28,7 @@ export const mentors = [
     bio: "Senior ML engineer specializing in fine-tuning large language models for conversational AI with 8+ years at Google AI.",
     x: "https://x.com/goncy",
     linkedin: "https://www.linkedin.com/in/gonzalopozzo/",
-    availableDate: "2025-05-23",
+    availableDate: "2025-05-24",
   },
   {
     id: "santiago_vilar",
