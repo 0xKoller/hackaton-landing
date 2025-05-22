@@ -17,7 +17,8 @@ import { BrutalistJudgesCarousel } from "@/components/brutalist-judges-carousel"
 export default function LandingPage() {
   const prizesRef = useRef<HTMLDivElement>(null);
 
-  const eventDate = new Date(2025, 5, 7);
+  // 8:00 AM ART (UTC-3) is 11:00 AM UTC
+  const eventDate = new Date(Date.UTC(2025, 5, 7, 11, 0, 0));
 
   return (
     <div className='flex min-h-screen flex-col bg-black text-white'>
