@@ -13,6 +13,7 @@ export const mentors = [
   {
     id: "federico_lombardozi",
     name: "Federico Lombardozzi",
+    title: "Federico Lombardozzi",
     position: "SWE @ Volt",
     image: "/mentors/federico.jpeg",
     bio: "Open source contributor and web technologies expert.",
@@ -23,6 +24,7 @@ export const mentors = [
   {
     id: "goncy",
     name: "Gonzalo Pozzo",
+    title: "Gonzalo Pozzo",
     position: "Senior Solutions Engineer @ Vercel",
     image: "/mentors/goncy.jpg",
     bio: "Senior ML engineer specializing in fine-tuning large language models for conversational AI with 8+ years at Google AI.",
@@ -33,6 +35,7 @@ export const mentors = [
   {
     id: "santiago_vilar",
     name: "Santiago Vilar",
+    title: "Santiago Vilar",
     position: "SWE @ Volt",
     image: "/mentors/santiago.jpeg",
     bio: "Technical lead who helped build WhatsApp's Business API. Expert in high-throughput messaging systems and real-time data processing.",
@@ -43,6 +46,7 @@ export const mentors = [
   {
     id: "matias_carpintini",
     name: "Matias Carpintini",
+    title: "Matias Carpintini",
     position: "SWE @ Volt",
     image: "/mentors/matias.jpeg",
     bio: "Former UX lead at OpenAI. Specializes in designing human-like conversation flows and implementing effective prompt engineering techniques.",
@@ -53,6 +57,7 @@ export const mentors = [
   {
     id: "tomas_celichini",
     name: "Tomas Celichini",
+    title: "Tomas Celichini",
     position: "Product Leader @ Darwin AI",
     image: "/mentors/tomas.jpeg",
     bio: "Full-stack developer with expertise in connecting AI models to production systems. Creator of three widely-used open source AI toolkits.",
@@ -63,6 +68,7 @@ export const mentors = [
   {
     id: "federico_molina",
     name: "Federico Molina",
+    title: "Federico Molina",
     position: "SWE @ Volt",
     image: "/mentors/federico_molina.jpg",
     bio: "Pioneer in advanced prompt engineering techniques. Developed frameworks for creating robust, context-aware conversational agents.",
@@ -73,6 +79,7 @@ export const mentors = [
   {
     id: "papa",
     name: "Papa",
+    title: "Papa",
     position: "Software Wizard @ ScaleAI & Organizer @ ShipBA",
     image: "/mentors/federico_molina.jpg",
     bio: "Pioneer in advanced prompt engineering techniques. Developed frameworks for creating robust, context-aware conversational agents.",
