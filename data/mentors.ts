@@ -16,7 +16,7 @@ export const mentors = [
     position: "SWE @ Volt",
     image: "/mentors/federico.jpeg",
     bio: "Open source contributor and web technologies expert.",
-    // x: "https://x.com/federicolombardoz",
+    x: "https://x.com/lombarrr",
     linkedin: "https://www.linkedin.com/in/federicolombardozzi/",
     availableDate: "2025-05-22",
   },
