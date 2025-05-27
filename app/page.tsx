@@ -13,6 +13,9 @@ import { Calendar, MapPin, Users, Trophy } from "lucide-react";
 import { filteredJudges as judges } from "@/data/judges";
 import { filteredMentors } from "@/data/mentors";
 import { BrutalistJudgesCarousel } from "@/components/brutalist-judges-carousel";
+import { prizes } from "@/data/prizes";
+import { BrutalistPrizeCard } from "@/components/brutalist-prize-card";
+import React from "react";
 
 export default function LandingPage() {
   const prizesRef = useRef<HTMLDivElement>(null);
@@ -157,40 +160,97 @@ export default function LandingPage() {
                 />
               </div>
             </div>
-
-            {/* Right column - Prizes section (replacing Technical Challenges) */}
-            <div ref={prizesRef}>
-              {/* Animated heading */}
-              <motion.div
-                className='mb-12 inline-block'
-                initial={{ x: 50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-              >
-                <div className='bg-green-500 px-4 py-2 text-black relative overflow-hidden'>
-                  {/* Animated background elements */}
-                  <motion.div
-                    className='absolute top-0 left-0 w-full h-full bg-black/10'
-                    initial={{ x: "-100%" }}
-                    whileInView={{ x: "100%" }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 1.5,
-                      delay: 0.3,
-                      ease: "easeInOut",
-                    }}
-                  />
-
-                  <h3 className='text-4xl font-black uppercase relative z-10'>
-                    AWARDS
-                  </h3>
-                </div>
-              </motion.div>
-
-              <BrutalistComingSoon type='prizes' className='col-span-full' />
-            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Prizes Section - 3 Columns by Category */}
+      <section className='bg-black py-16 md:py-24 relative overflow-hidden'>
+        <div className='px-4 md:px-12 lg:px-24 relative z-10 max-w-[1800px] mx-auto'>
+          <motion.div
+            className='mb-12 inline-block'
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className='bg-green-500 px-4 py-2 text-black relative overflow-hidden'>
+              <motion.div
+                className='absolute top-0 left-0 w-full h-full bg-black/10'
+                initial={{ x: "-100%" }}
+                whileInView={{ x: "100%" }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 1.5,
+                  delay: 0.3,
+                  ease: "easeInOut",
+                }}
+              />
+              <h3 className='text-4xl font-black uppercase relative z-10'>
+                AWARDS
+              </h3>
+            </div>
+          </motion.div>
+
+          {/* 3-column grid for categories */}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto mb-16'>
+            {["Technology", "Business Model", "Creativity"].map(
+              (category, catIdx) => {
+                const catPrizes = prizes.filter((p) => p.category === category);
+                return (
+                  <div key={category} className='flex flex-col items-center'>
+                    <span className='text-green-500 text-xl font-black uppercase mb-6 tracking-widest'>
+                      {category}
+                    </span>
+                    {catPrizes.map((prize, idx) => {
+                      let color = "green";
+                      if (prize.title === "1st place") color = "gold";
+                      else if (prize.title === "2nd place") color = "silver";
+                      return (
+                        <div
+                          key={prize.title + idx}
+                          className='w-full max-w-[340px] mb-6'
+                        >
+                          <BrutalistPrizeCard
+                            title={prize.title}
+                            amount={prize.amount}
+                            description={prize.description}
+                            index={catIdx * 3 + idx}
+                            highlight={prize.title === "1st place"}
+                            color={color as "gold" | "silver" | "green"}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                );
+              }
+            )}
+          </div>
+
+          {/* Special Prize */}
+          {prizes
+            .filter((p) => p.category === "Special")
+            .map((prize, idx) => (
+              <div
+                key={prize.title}
+                className='flex flex-col items-center mt-12 mb-4'
+              >
+                <span className='text-green-500 text-xl font-black uppercase mb-4 tracking-widest'>
+                  Special Prize
+                </span>
+                <div className='w-full max-w-[380px]'>
+                  <BrutalistPrizeCard
+                    title={prize.title}
+                    amount={prize.amount}
+                    description={prize.description}
+                    category={prize.category}
+                    index={100 + idx}
+                    highlight
+                  />
+                </div>
+              </div>
+            ))}
         </div>
       </section>
 

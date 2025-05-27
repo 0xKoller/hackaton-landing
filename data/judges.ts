@@ -77,12 +77,12 @@ export const judges = [
     id: "montone",
     name: "Nicolas Montone",
     title: "Nicolas Montone",
-    position: "Prev Head of Payments @ Pluggy & Organizer @ ShipBA",
+    position: "Product Engineer @ v0 & Organizer @ ShipBA",
     image: "/judges/monto.jpeg",
     bio: "Expert in machine learning and scalable systems.",
     x: "https://x.com/montonenico",
     linkedin: "https://www.linkedin.com/in/nicolas-montone/",
-    availableDate: "2025-05-27",
+    availableDate: "2025-05-26",
   },
 ];
 

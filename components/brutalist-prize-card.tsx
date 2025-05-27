@@ -10,16 +10,20 @@ interface BrutalistPrizeCardProps {
   title: string;
   amount: string;
   description: string;
+  category: string;
   index: number;
   highlight?: boolean;
+  color?: "gold" | "silver" | "green";
 }
 
 export function BrutalistPrizeCard({
   title,
   amount,
   description,
+  category,
   index,
   highlight = false,
+  color = "green",
 }: BrutalistPrizeCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(cardRef, { once: true, amount: 0.3 });
@@ -82,6 +86,20 @@ export function BrutalistPrizeCard({
     }
   }, [isComplete, shouldAnimate, numericValue]);
 
+  // Color classes
+  const borderColor =
+    color === "gold"
+      ? "border-yellow-400 hover:border-yellow-300"
+      : color === "silver"
+        ? "border-gray-300 hover:border-gray-200"
+        : "border-green-500 hover:border-green-400";
+  const textColor =
+    color === "gold"
+      ? "text-yellow-400 group-hover:text-yellow-300"
+      : color === "silver"
+        ? "text-gray-300 group-hover:text-gray-200"
+        : "text-green-500 group-hover:text-green-400";
+
   return (
     <motion.div
       className='relative'
@@ -103,34 +121,36 @@ export function BrutalistPrizeCard({
       )}
 
       <div
-        className={`group bg-black border-l-8 border-green-500 hover:border-l-[16px] transition-all duration-300 
+        className={`group bg-black border-l-8 ${borderColor} hover:border-l-[16px] transition-all duration-300 
           ${
             highlight
-              ? "border-t-4 border-r-4 border-b-4 border-green-500/30"
+              ? `border-t-4 border-r-4 border-b-4 ${borderColor}/30`
               : ""
           }`}
       >
         {/* Animated corner decorations */}
         <motion.div
-          className='absolute top-0 right-0 w-12 h-12 border-l-2 border-b-2 border-green-500 opacity-0'
+          className={`absolute top-0 right-0 w-12 h-12 border-l-2 border-b-2 ${borderColor} opacity-0`}
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: index * 0.15 + 0.3, duration: 0.5 }}
         />
 
         <motion.div
-          className='absolute bottom-0 left-0 w-12 h-12 border-r-2 border-t-2 border-green-500 opacity-0'
+          className={`absolute bottom-0 left-0 w-12 h-12 border-r-2 border-t-2 ${borderColor} opacity-0`}
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: index * 0.15 + 0.4, duration: 0.5 }}
         />
 
         {/* Animated background pulse effect */}
-        <div className='absolute inset-0 bg-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+        <div
+          className={`absolute inset-0 ${color === "gold" ? "bg-yellow-400/10" : color === "silver" ? "bg-gray-300/10" : "bg-green-500/5"} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+        />
 
         {/* Animated background line */}
         <motion.div
-          className='absolute h-[1px] bg-green-500/30 left-0 right-0'
+          className={`absolute h-[1px] ${color === "gold" ? "bg-yellow-400/30" : color === "silver" ? "bg-gray-300/30" : "bg-green-500/30"} left-0 right-0`}
           style={{ top: "50%" }}
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
@@ -152,48 +172,35 @@ export function BrutalistPrizeCard({
           {/* Amount with counter animation */}
           <div className='mb-4 overflow-hidden'>
             <div className='flex items-center'>
-              {shouldAnimate && (
-                <motion.div
-                  className='text-5xl font-black text-green-500'
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
-                >
+              {category !== "Special" && (
+                <div className={`text-5xl font-black ${textColor}`}>
                   {numericValue !== null ? (
                     <>
                       <span className='inline-block'>{prefix}</span>
-                      <span className='inline-block'>{formattedCount}</span>
+                      <span className='inline-block'>
+                        {formatNumber(numericValue)}
+                      </span>
                       <span className='inline-block'>{suffix}</span>
                     </>
                   ) : (
-                    <motion.span
-                      initial={{ opacity: 0, filter: "blur(8px)" }}
-                      animate={{
-                        opacity: 1,
-                        filter: "blur(0px)",
-                        transition: {
-                          duration: 1.5,
-                          delay: index * 0.15 + 0.2,
-                        },
-                      }}
-                    >
-                      {amount}
-                    </motion.span>
+                    <span>{amount}</span>
                   )}
-                </motion.div>
+                </div>
               )}
             </div>
           </div>
 
           {/* Description with reveal animation */}
-          <motion.p
-            className='text-white/80 font-mono relative z-10'
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: index * 0.15 + 0.4, duration: 0.5 }}
-          >
-            {description}
-          </motion.p>
+          {category === "Special" && (
+            <motion.p
+              className='text-white/80 font-mono relative z-10'
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: index * 0.15 + 0.4, duration: 0.5 }}
+            >
+              {description}
+            </motion.p>
+          )}
         </div>
 
         {/* Animated highlight effect for hover */}
