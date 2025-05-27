@@ -82,7 +82,7 @@ export const judges = [
     bio: "Expert in machine learning and scalable systems.",
     x: "https://x.com/montonenico",
     linkedin: "https://www.linkedin.com/in/nicolas-montone/",
-    availableDate: "2025-05-26",
+    availableDate: "2025-05-28",
   },
 ];
 
