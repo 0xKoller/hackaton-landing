@@ -81,7 +81,7 @@ export const mentors = [
     name: "Papa",
     title: "Papa",
     position: "Software Wizard @ ScaleAI & Organizer @ ShipBA",
-    image: "/mentors/federico_molina.jpg",
+    image: "/mentors/papa.jpg",
     bio: "Pioneer in advanced prompt engineering techniques. Developed frameworks for creating robust, context-aware conversational agents.",
     x: "https://x.com/sebipaps",
     linkedin:
