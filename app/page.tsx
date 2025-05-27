@@ -87,7 +87,7 @@ export default function LandingPage() {
             <span className='block -mb-8'>ABOUT</span>
           </BrutalistHeading>
 
-          <div className='mt-24 grid grid-cols-1 md:grid-cols-2 gap-24'>
+          <div className='mt-24  gap-24'>
             {/* Left column - Event overview */}
             <div>
               <BrutalistText className='mb-8'>
@@ -218,6 +218,7 @@ export default function LandingPage() {
                             index={catIdx * 3 + idx}
                             highlight={prize.title === "1st place"}
                             color={color as "gold" | "silver" | "green"}
+                            category={prize.category}
                           />
                         </div>
                       );
@@ -247,6 +248,8 @@ export default function LandingPage() {
                     category={prize.category}
                     index={100 + idx}
                     highlight
+                    noCounter
+                    special
                   />
                 </div>
               </div>
