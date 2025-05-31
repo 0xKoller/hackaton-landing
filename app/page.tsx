@@ -37,39 +37,66 @@ export default function LandingPage() {
             className='max-w-4xl mx-auto'
           />
 
-          <div className='flex flex-col sm:flex-row justify-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4'>
+          <div className='relative my-16'>
+            {/* Brutalist green corners */}
+            <div className='absolute -left-4 -top-4 w-20 h-20 border-t-4 border-l-4 border-green-500/80 pointer-events-none' />
+            <div className='absolute -right-4 -bottom-4 w-20 h-20 border-b-4 border-r-4 border-green-500/80 pointer-events-none' />
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              className='bg-black border-l-8 border-green-500 p-10 md:p-16 max-w-2xl mx-auto shadow-xl relative z-10'
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
             >
-              <Button
-                size='lg'
-                className='w-full sm:w-[250px] bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
-                onClick={() => {
-                  window.open("https://forms.gle/nELzhgfeXURg6D66A", "_blank");
-                }}
+              <div className='flex items-center mb-8'>
+                <div className='bg-green-500 h-8 w-8 mr-4 rotate-[-3deg]' />
+                <h3 className='text-4xl md:text-5xl font-black uppercase text-white tracking-tighter brutalist-title drop-shadow-lg'>
+                  SOLD OUT
+                </h3>
+              </div>
+              <p className='text-green-500 font-mono text-lg md:text-xl'>
+                Thank you for your interest! Follow us for future opportunities.
+              </p>
+              <a
+                href='https://x.com/HackTheChat'
+                target='_blank'
+                rel='noopener noreferrer'
+                className=' font-mono text-white text-xl font-bold hover:text-green-400 transition-colors underline underline-offset-4'
               >
-                <span className='relative z-10 font-bold'>
-                  APPLY INDIVIDUALLY
-                </span>
-              </Button>
+                @HackTheChat
+              </a>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <Button
-                size='lg'
-                className='w-full sm:w-[250px] bg-green-400 text-black border border-green-400/50 px-8 py-6 text-xl'
-                onClick={() => {
-                  window.open("https://forms.gle/epRB14hsx3LnCYycA", "_blank");
-                }}
-              >
-                <span className='relative z-10 font-bold'>APPLY WITH TEAM</span>
-              </Button>
-            </motion.div>
+            <div className='mt-10 border-t-4 border-green-500 pt-8 flex flex-col items-center'>
+              <span className='text-green-500 font-black uppercase tracking-widest text-lg mb-2'>
+                Organizers
+              </span>
+              <div className='flex flex-col md:flex-row gap-4 md:gap-8 items-center'>
+                <a
+                  href='https://x.com/0xKoller'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='font-mono text-white text-xl font-bold hover:text-green-400 transition-colors underline underline-offset-4'
+                >
+                  0xKoller
+                </a>
+                <a
+                  href='https://x.com/MigueMorkin'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='font-mono text-white text-xl font-bold hover:text-green-400 transition-colors underline underline-offset-4'
+                >
+                  Miguel Morkin
+                </a>
+                <a
+                  href='https://x.com/LuTrujilloAR'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='font-mono text-white text-xl font-bold hover:text-green-400 transition-colors underline underline-offset-4'
+                >
+                  Luciano Trujillo
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
