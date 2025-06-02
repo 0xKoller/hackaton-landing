@@ -99,6 +99,16 @@ export const mentors = [
     linkedin: "https://www.linkedin.com/in/nahuel-alberti/",
     availableDate: "2025-06-06",
   },
+  {
+    id: "nico_walter",
+    name: "Nicolas Walter",
+    title: "Nicolas Walter",
+    position: "Co-founder & CTO @ Primo",
+    image: "/mentors/nico_walter.jpg",
+    x: "https://x.com/nicowalter25",
+    linkedin: "https://www.linkedin.com/in/nicolas-walter/",
+    availableDate: "2025-06-08",
+  },
 ];
 
 function normalizeDate(dateStr: string) {
