@@ -88,6 +88,17 @@ export const mentors = [
       "https://www.linkedin.com/in/sebasti%C3%A1n-papanicolau-10baa91b1/",
     availableDate: "2025-05-28",
   },
+  {
+    id: "nahue",
+    name: "Nahuel Alberti",
+    title: "Nahue Alberti",
+    position: "CTO @ Paisanos",
+    image: "/mentors/nahue.jpeg",
+    bio: "Pioneer in advanced prompt engineering techniques. Developed frameworks for creating robust, context-aware conversational agents.",
+    x: "https://x.com/nays1_",
+    linkedin: "https://www.linkedin.com/in/nahuel-alberti/",
+    availableDate: "2025-06-06",
+  },
 ];
 
 function normalizeDate(dateStr: string) {

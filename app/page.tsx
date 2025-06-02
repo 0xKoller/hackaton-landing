@@ -6,7 +6,7 @@ import { BrutalistEventDetail } from "@/components/brutalist-event-detail";
 import { BrutalistComingSoon } from "@/components/brutalist-coming-soon";
 import { BrutalistCountdown } from "@/components/brutalist-countdown";
 import { BrutalistSponsorSection } from "@/components/brutalist-sponsor-section";
-// import { BrutalistTimeline } from "@/components/brutalist-timeline";
+import { BrutalistTimeline } from "@/components/brutalist-timeline";
 import { motion, HTMLMotionProps } from "framer-motion";
 import { useRef } from "react";
 import { Calendar, MapPin, Users, Trophy } from "lucide-react";
@@ -311,7 +311,41 @@ export default function LandingPage() {
           </motion.div>
 
           {/* Timeline Coming Soon (using 'judges' as placeholder type) */}
-          <BrutalistComingSoon type='timeline' className='col-span-full' />
+          <BrutalistTimeline
+            className='col-span-full'
+            events={[
+              {
+                time: "8:00am - 9:00am",
+                title: "Reception & Breakfast",
+                description:
+                  "Team formation for individuals who haven't joined a team yet. Enjoy breakfast and get ready!",
+              },
+              {
+                time: "9:00am - 9:30am",
+                title: "Intro Talk",
+                description:
+                  "Kickoff presentation: event overview, rules, and inspiration to start hacking!",
+              },
+              {
+                time: "9:30am - 6:30pm",
+                title: "Hackathon",
+                description:
+                  "Build your project! Food and drinks will be available throughout the day.",
+              },
+              {
+                time: "6:30pm - 8:00pm",
+                title: "Project Presentations & Awards",
+                description:
+                  "Teams present to the jury. Winners and awards ceremony.",
+              },
+              {
+                time: "8:00pm - 9:30pm",
+                title: "After Party",
+                description:
+                  "Celebrate, network, and relax after a full day of hacking!",
+              },
+            ]}
+          />
         </div>
       </section>
 
