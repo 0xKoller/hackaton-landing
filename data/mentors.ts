@@ -97,7 +97,7 @@ export const mentors = [
     bio: "Pioneer in advanced prompt engineering techniques. Developed frameworks for creating robust, context-aware conversational agents.",
     x: "https://x.com/nays1_",
     linkedin: "https://www.linkedin.com/in/nahuel-alberti/",
-    availableDate: "2025-06-06",
+    availableDate: "2025-06-01",
   },
   {
     id: "nico_walter",
@@ -107,7 +107,7 @@ export const mentors = [
     image: "/mentors/nico_walter.jpg",
     x: "https://x.com/nicowalter25",
     linkedin: "https://www.linkedin.com/in/nicolas-walter/",
-    availableDate: "2025-06-08",
+    availableDate: "2025-06-01",
   },
 ];
 
