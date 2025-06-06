@@ -84,6 +84,18 @@ export const judges = [
     linkedin: "https://www.linkedin.com/in/nicolas-montone/",
     availableDate: "2025-05-28",
   },
+  {
+    index: 7,
+    id: "valen",
+    name: "Valentina Bearzotti",
+    title: "Valentina Bearzotti",
+    position: "Frontend Developer @ basement.studio",
+    image: "/judges/valen.jpg",
+    bio: "Expert in machine learning and scalable systems.",
+    x: "https://x.com/valebearzotti",
+    linkedin: "https://www.linkedin.com/in/valentinabearzotti",
+    availableDate: "2025-05-28",
+  },
 ];
 
 function normalizeDate(dateStr: string) {
