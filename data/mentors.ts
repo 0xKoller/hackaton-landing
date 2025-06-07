@@ -119,6 +119,16 @@ export const mentors = [
     // linkedin: "https://www.linkedin.com/in/nicolasdkenny/",
     availableDate: "2025-06-01",
   },
+  {
+    id: "pabloRo",
+    name: "Pablo Roca",
+    title: "Pablo Roca",
+    position: "CTO @ 123Seguro",
+    image: "/mentors/pablo.jpeg",
+    x: "https://x.com/marcosnils",
+    // linkedin: "https://www.linkedin.com/in/nicolasdkenny/",
+    availableDate: "2025-06-01",
+  },
 ];
 
 function normalizeDate(dateStr: string) {
