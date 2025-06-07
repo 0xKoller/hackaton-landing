@@ -129,6 +129,16 @@ export const mentors = [
     // linkedin: "https://www.linkedin.com/in/nicolasdkenny/",
     availableDate: "2025-06-01",
   },
+  {
+    id: "matLo",
+    name: "Matias Lopez",
+    title: "Matias Lopez",
+    position: "Director IT @ Grupo Tesacom",
+    image: "/mentors/matlo.jpeg",
+    x: "https://x.com/matnalopez",
+    linkedin: "https://www.linkedin.com/in/matnalopez/",
+    availableDate: "2025-06-01",
+  },
 ];
 
 function normalizeDate(dateStr: string) {
