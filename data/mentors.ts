@@ -120,6 +120,16 @@ export const mentors = [
     availableDate: "2025-06-01",
   },
   {
+    id: "walter",
+    name: "Nicolas Walter",
+    title: "Nicolas Walter",
+    position: "Co-Founder & CTO @ Primo",
+    image: "/mentors/nico_walter.jpg",
+    x: "https://x.com/nicowalter25",
+    // linkedin: "https://www.linkedin.com/in/nicolasdkenny/",
+    availableDate: "2025-06-01",
+  },
+  {
     id: "pabloRo",
     name: "Pablo Roca",
     title: "Pablo Roca",
